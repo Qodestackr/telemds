@@ -1,6 +1,6 @@
 import BreadCrumb from "@/components/breadcrumb";
-import { columns } from "@/components/tables/employee-tables/columns";
-import { EmployeeTable } from "@/components/tables/employee-tables/employee-table";
+import { columns } from "@/components/tables/patient-tables/columns";
+import { PatientTable } from "@/components/tables/patient-tables/patient-table";
 import { buttonVariants } from "@/components/ui/button";
 import { Heading } from "@/components/ui/heading";
 import { Separator } from "@/components/ui/separator";
@@ -31,6 +31,7 @@ export default async function page({ searchParams }: paramsProps) {
   const totalUsers = employeeRes.total_users; //1000
   const pageCount = Math.ceil(totalUsers / pageLimit);
   const employee: Patient[] = employeeRes.users;
+  console.log(employee && employee, ';;;;;;;;;;')
   return (
     <>
       <div className="flex-1 space-y-4  p-4 md:p-8 pt-6">
@@ -51,7 +52,7 @@ export default async function page({ searchParams }: paramsProps) {
         </div>
         <Separator />
 
-        <EmployeeTable
+        <PatientTable
           searchKey="patient"
           pageNo={page}
           columns={columns}

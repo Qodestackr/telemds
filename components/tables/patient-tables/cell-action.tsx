@@ -8,13 +8,13 @@ import {
   DropdownMenuLabel,
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
-import { Employee } from "@/constants/data";
-import { Edit, MoreHorizontal, Trash } from "lucide-react";
+import { Patient } from "@/constants/data";
+import { Edit, MoreHorizontal, Trash, View } from "lucide-react";
 import { useParams, useRouter } from "next/navigation";
 import { useState } from "react";
 
 interface CellActionProps {
-  data: Employee;
+  data: Patient;
 }
 
 export const CellAction: React.FC<CellActionProps> = ({ data }) => {
@@ -22,7 +22,7 @@ export const CellAction: React.FC<CellActionProps> = ({ data }) => {
   const [open, setOpen] = useState(false);
   const router = useRouter();
 
-  const onConfirm = async () => {};
+  const onConfirm = async () => { };
 
   return (
     <>
@@ -42,15 +42,27 @@ export const CellAction: React.FC<CellActionProps> = ({ data }) => {
         <DropdownMenuContent align="end">
           <DropdownMenuLabel>Actions</DropdownMenuLabel>
 
+          {/*  */}
           <DropdownMenuItem
+          className="cursor-pointer"
+          >
+          <View /> View
+          </DropdownMenuItem>
+          {/*  */}
+
+          <DropdownMenuItem
+          className="cursor-pointer"
             onClick={() => router.push(`/dashboard/user/${data.id}`)}
           >
             <Edit className="mr-2 h-4 w-4" /> Update
           </DropdownMenuItem>
-          <DropdownMenuItem onClick={() => setOpen(true)}>
+          <DropdownMenuItem 
+          className="cursor-pointer"
+          onClick={() => setOpen(true)}>
             <Trash className="mr-2 h-4 w-4" /> Delete
           </DropdownMenuItem>
         </DropdownMenuContent>
+
       </DropdownMenu>
     </>
   );

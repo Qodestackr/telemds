@@ -43,14 +43,14 @@ export const IMG_MAX_LIMIT = 3;
 const formSchema = z.object({
   name: z
     .string()
-    .min(3, { message: "Product Name must be at least 3 characters" }),
+    .min(3, { message: "User Name must be at least 3 characters" }),
   imgUrl: z
     .array(ImgSchema)
     .max(IMG_MAX_LIMIT, { message: "You can only add up to 3 images" })
     .min(1, { message: "At least one image must be added." }),
   description: z
     .string()
-    .min(3, { message: "Product description must be at least 3 characters" }),
+    .min(3, { message: "User description must be at least 3 characters" }),
   price: z.coerce.number(),
   category: z.string().min(1, { message: "Please select a category" }),
 });
@@ -72,9 +72,9 @@ export const ProductForm: React.FC<ProductFormProps> = ({
   const [open, setOpen] = useState(false);
   const [loading, setLoading] = useState(false);
   const [imgLoading, setImgLoading] = useState(false);
-  const title = initialData ? "Edit product" : "Create product";
-  const description = initialData ? "Edit a product." : "Add a new product";
-  const toastMessage = initialData ? "Product updated." : "Product created.";
+  const title = initialData ? "Edit User" : "Create User";
+  const description = initialData ? "Edit a User." : "Add new User";
+  const toastMessage = initialData ? "User updated." : "User created.";
   const action = initialData ? "Save changes" : "Create";
 
   const defaultValues = initialData
@@ -102,7 +102,7 @@ export const ProductForm: React.FC<ProductFormProps> = ({
         // console.log("product", res);
       }
       router.refresh();
-      router.push(`/dashboard/products`);
+      router.push(`/dashboard/users`);
       toast({
         variant: "destructive",
         title: "Uh oh! Something went wrong.",
@@ -188,7 +188,7 @@ export const ProductForm: React.FC<ProductFormProps> = ({
                   <FormControl>
                     <Input
                       disabled={loading}
-                      placeholder="Product name"
+                      placeholder="User name"
                       {...field}
                     />
                   </FormControl>
@@ -205,7 +205,7 @@ export const ProductForm: React.FC<ProductFormProps> = ({
                   <FormControl>
                     <Input
                       disabled={loading}
-                      placeholder="Product description"
+                      placeholder="User description"
                       {...field}
                     />
                   </FormControl>

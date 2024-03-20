@@ -29,11 +29,16 @@ import {
   User2Icon,
   UserX2Icon,
   X,
+  MessageCircle,
+  BarChart4,
+  CalendarClock
 } from "lucide-react";
 
 export type Icon = LucideIcon;
 
 export const Icons = {
+  analytics: BarChart4,
+  appointment: CalendarClock,
   dashboard: LayoutDashboardIcon,
   logo: Command,
   login: LogIn,
@@ -59,6 +64,7 @@ export const Icons = {
   pizza: Pizza,
   sun: SunMedium,
   moon: Moon,
+  message: MessageCircle,
   laptop: Laptop,
   gitHub: ({ ...props }: LucideProps) => (
     <svg

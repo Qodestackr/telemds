@@ -1,4 +1,6 @@
 import { Icons } from "@/components/icons";
+import { BadgeDollarSign, BarChart4, BellDot, CalendarClock, LogOut, MessageCircle, ShieldBan, Stethoscope, User, UserCog, } from "lucide-react";
+
 import { NavItem, SidebarNavItem } from "@/types";
 
 export type User = {
@@ -118,12 +120,36 @@ export const navItems: NavItem[] = [
     icon: "dashboard",
     label: "Dashboard",
   },
+  // Financial Account Details
+  // Revenue Insights
+  // Treatment Plans
+  // Patient Management
+  // Messages
   {
-    title: "User Management",
-    href: "/dashboard/user",
-    icon: "user",
-    label: "user",
+    title: "Analytics",
+    href: "/dashboard/analytics",
+    icon: "analytics",
+    label: "Analytics",
   },
+  
+  {
+    title: "Messages",
+    href: "/dashboard/messages",
+    icon: "message",
+    label: "Messages",
+  },
+  {
+    title: "Financial Details",
+    href: "/dashboard/financial-details",
+    icon: "billing",
+    label: "Financial Details",
+  },
+  // {
+  //   title: "User Management",
+  //   href: "/dashboard/user",
+  //   icon: "user",
+  //   label: "user",
+  // },
   {
     title: "Patients",
     href: "/dashboard/patient",
@@ -139,19 +165,19 @@ export const navItems: NavItem[] = [
   {
     title: "Book an Appointment",
     href: "/dashboard/book-appointment",
-    // icon: "",
+    icon: "appointment",
     label: "book-an-appointment",
   },
   {
-    title: "Appointment Management",
+    title: "Appointment Manager",
     href: "/dashboard/kanban",
     icon: "kanban",
     label: "kanban",
   },
   {
-    title: "Login",
+    title: "Logout",
     href: "/",
     icon: "login",
-    label: "login",
+    label: "logout",
   },
 ];
