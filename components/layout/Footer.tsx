@@ -2,14 +2,7 @@
 import Link from 'next/link';
 import React from 'react';
 import { usePathname } from 'next/navigation';
-
-// import {
-//   IconBrandFacebook,
-//   IconBrandInstagram,
-//   IconBrandLinkedin,
-//   IconBrandTiktok,
-//   IconBrandTwitter
-// } from '@tabler/icons-react';
+import { Twitter, Facebook, Linkedin, Instagram } from 'lucide-react';
 
 // import DarkModeSwitcher from '../DarkModeSwitcher';
 
@@ -62,7 +55,7 @@ export default function Footer() {
                 className="inline-flex gap-x-2 text-gray-600 hover:text-gray-800 dark:text-gray-400 dark:hover:text-gray-200 dark:focus:outline-none dark:focus:ring-1 dark:focus:ring-gray-600"
                 href="/types-of-care/mens-health"
               >
-                Men's Health
+                Men&apos;s Health
               </Link>
             </p>
             <p>
@@ -70,7 +63,7 @@ export default function Footer() {
                 className="inline-flex gap-x-2 text-gray-600 hover:text-gray-800 dark:text-gray-400 dark:hover:text-gray-200 dark:focus:outline-none dark:focus:ring-1 dark:focus:ring-gray-600"
                 href="/types-of-care/womens-health"
               >
-                Women's Health
+                Women&apos;s Health
               </Link>
             </p>
             <p>
@@ -252,7 +245,7 @@ export default function Footer() {
                 className="inline-flex gap-x-2 text-gray-600 hover:text-gray-800 dark:text-gray-400 dark:hover:text-gray-200 dark:focus:outline-none dark:focus:ring-1 dark:focus:ring-gray-600"
                 href="/afyamed-pay"
               >
-                AfyaPay 
+                AfyaPay
               </Link>
             </p>
           </div>
@@ -266,7 +259,7 @@ export default function Footer() {
               <button
                 id="footer-language-dropdown"
                 type="button"
-                className="hs-dropdown-toggle text-black py-2 px-3 inline-flex items-center gap-x-2 text-sm rounded-lg border border-gray-200 text-gray-800 shadow-sm hover:bg-gray-50 disabled:opacity-50 disabled:pointer-events-none dark:bg-slate-900 dark:border-gray-700 dark:text-white dark:hover:bg-gray-800 dark:focus:outline-none dark:focus:ring-1 dark:focus:ring-gray-600"
+                className="hs-dropdown-toggle py-2 px-3 inline-flex items-center gap-x-2 text-sm rounded-lg border border-gray-200 text-gray-800 shadow-sm hover:bg-gray-50 disabled:opacity-50 disabled:pointer-events-none dark:bg-slate-900 dark:border-gray-700 dark:text-white dark:hover:bg-gray-800 dark:focus:outline-none dark:focus:ring-1 dark:focus:ring-gray-600"
               >
                 <svg
                   className="w-3 h-3 rounded-full"
@@ -392,31 +385,25 @@ export default function Footer() {
 
             <div className="space-x-4 flex justify-center items-center">
               {/* <DarkModeSwitcher /> */}
-              <a href="https://twitter.com/afyamedAfrica" target="_blank">
-                Twitter
-                {/* <IconBrandTwitter />{' '} */}
-              </a>
-              <a
+              <Link className='text-slate-900' href="https://twitter.com/afyamedAfrica" target="_blank">
+                <Twitter />
+              </Link>
+              <Link className='text-slate-900'
                 href="https://www.facebook.com/people/afyamed-Africa/61554202584585/"
                 target="_blank"
               >
-                Facebook
-                {/* <IconBrandFacebook /> */}
-              </a>
-              <a href="https://www.linkedin.com/in/afyamedafrica/" target="_blank">
-                Linkedin
-                {/* <IconBrandLinkedin /> */}
-              </a>
+                <Facebook />
+              </Link>
+              <Link className='text-slate-900' href="https://www.linkedin.com/in/afyamedafrica/" target="_blank">
+                <Linkedin />
+              </Link>
 
-              <a href="https://www.tiktok.com/@afyamedafrica" target="_blank">
-                {/* <IconBrandTiktok /> */}
+              <Link className='text-slate-900' href="https://www.tiktok.com/@afyamedafrica" target="_blank">
                 Tiktok
-              </a>
-              <a href="https://www.instagram.com/afyamedafrica/" target="_blank">
-                {/* <IconBrandInstagram />
-                 */}
-                Instagram
-              </a>
+              </Link>
+              <Link className='text-slate-900' href="https://www.instagram.com/afyamedafrica/" target="_blank">
+                <Instagram />
+              </Link>
             </div>
           </div>
         </div>

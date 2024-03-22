@@ -646,39 +646,14 @@ export const OptionKey = ({ className }: { className: string }) => {
   );
 };
 
-const AfyaMedLogo = () => {
+export const AfyaMedLogo = () => {
   return (
-    <>
-      {/* <svg
-      width="66"
-      height="65"
-      viewBox="0 0 66 65"
-      fill="none"
-      xmlns="http://www.w3.org/2000/svg"
-      className="h-3 w-3 text-white"
-    >
-      <path
-        d="M8 8.05571C8 8.05571 54.9009 18.1782 57.8687 30.062C60.8365 41.9458 9.05432 57.4696 9.05432 57.4696"
-        stroke="currentColor"
-        strokeWidth="15"
-        strokeMiterlimit="3.86874"
-        strokeLinecap="round"
-      />
-    </svg> */}
-
-      <div className="hidden lg:block">
-        <span
-          className="text-slate-900 font-medium text-xl hover:scale-110 transition-transform duration-300"
-        >
-          <span className="text-blue-600 font-bold text-3xl mr-1">A</span>
-          <span className="text-red-600 font-bold text-3xl mr-1">f</span>
-          <span className="text-yellow-600 font-bold text-3xl mr-1">y</span>
-          <span className="text-green-600 font-bold text-3xl mr-1">a</span>
-          <span className="text-indigo-600 font-bold text-3xl mr-1">M</span>
-          <span className="text-purple-600 font-bold text-3xl">e</span>
-          <span className="text-md text-gray-600 ml-1">d</span>
-        </span>
-      </div>
-    </>
+    <div className="afyamed-logo">
+      <span className="text-blue-500 font-bold text-4xl mr-1">A</span>
+      <span className="text-teal-500 font-bold text-4xl mr-1">f</span>
+      <span className="text-pink-500 font-bold text-4xl mr-1">y</span>
+      <span className="text-purple-500 font-bold text-4xl mr-1">a</span>
+      <span className="text-yellow-500 font-bold text-4xl">Med</span>
+    </div>
   );
 };

@@ -1,6 +1,6 @@
 'use client';
 
-import { DemoShareDocument } from '@/app/examples/cards/components/share-document'
+// import { DemoShareDocument } from '@/app/examples/cards/components/share-document'
 import { ScrollArea } from '@/components/ui/scroll-area'
 import Link from 'next/link'
 

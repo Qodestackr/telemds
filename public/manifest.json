@@ -1,0 +1,28 @@
+{
+    "name": "AfyaMed",
+    "short_name": "AfyaMed",
+    "theme_color": "#ffffff",
+    "background_color": "#ffffff",
+    "description": "AfyaMed revolutionizes healthcare in East Africa, providing swift virtual consultations, prescription refills, and specialized care. Experience rapid, reliable medical services at your fingertips.",
+    "icons": [
+      {
+        "src": "/icons/android-chrome-192x192.png",
+        "sizes": "192x192",
+        "type": "image/png",
+        "purpose": "any maskable"
+      },
+      {
+        "src": "/icons/android-chrome-512x512.png",
+        "sizes": "512x512",
+        "type": "image/png",
+        "purpose": "any maskable"
+      }
+    ],
+    "display": "standalone",
+    "display_override": ["minimal-ui"],
+    "orientation": "portrait",
+    "start_url": "/",
+    "id": "/",
+    "splash_pages": null,
+    "prefer_related_applications": true
+  }

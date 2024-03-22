@@ -220,7 +220,7 @@ export default function DashboardMain() {
                       <div className="absolute z-0 opacity-0 hover:opacity-50" style={{ mixBlendMode: "multiply" }}></div>
                       <div className="z-10 flex flex-col justify-between">
                         <h1 className="text-4xl text-white">70+</h1>
-                        <h6 className="mt-12 text-xl text-white sm:text-3xl">Awards</h6>
+                        <h6 className="mt-12 text-xl text-white sm:text-3xl">Health Outcomes</h6>
                       </div>
                     </div>
                   </div>
@@ -236,7 +236,7 @@ export default function DashboardMain() {
                     <div className="h-full w-full bg-red-200 p-6">
                       <div className="z-10 flex flex-col justify-between">
                         <h1 className="text-4xl text-blue-900">23</h1>
-                        <h6 className="mt-12 text-xl text-blue-900 sm:text-3xl">Fortune 500 Clients</h6>
+                        <h6 className="mt-12 text-xl text-blue-900 sm:text-3xl">Telemedicine Access:</h6>
                       </div>
                     </div>
                   </div>

@@ -1,16 +1,29 @@
-MIT License
+AfyaMed Proprietary License
 
-Copyright (c) 2023 Kiranism
+Copyright (c) 2023 AfyaMed Technologies
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
-of this software and associated documentation files (the "Software"), to deal
-in the Software without restriction, including without limitation the rights
-to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-copies of the Software, and to permit persons to whom the Software is
-furnished to do so, subject to the following conditions:
+of this software and associated documentation files (the "Software"), to use
+the Software for internal purposes within the AfyaMed ecosystem, subject to the
+following conditions:
 
-The above copyright notice and this permission notice shall be included in all
-copies or substantial portions of the Software.
+1. The Software shall only be used within the AfyaMed platform and its affiliated
+   services.
+
+2. Redistribution or reproduction of the Software, in whole or in part, is strictly
+   prohibited without prior written permission from AfyaMed Technologies.
+
+3. Modification, reverse engineering, or derivative works of the Software are
+   not permitted without explicit authorization from AfyaMed Technologies.
+
+4. The Software may not be sublicensed, sold, or distributed to third parties
+   without express written consent from AfyaMed Technologies.
+
+5. Any use of the Software outside the AfyaMed platform must be authorized in
+   writing by AfyaMed Technologies.
+
+6. All proprietary rights in the Software, including but not limited to intellectual
+   property rights, remain the exclusive property of AfyaMed Technologies.
 
 THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
 IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,

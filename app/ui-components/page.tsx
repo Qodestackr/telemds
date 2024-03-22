@@ -9,6 +9,9 @@ import Profile from '@/components/Profile'
 import { AfyaMedGlobe } from '@/components/AfyaMedGlobe'
 import CreditCards2 from './CreditCards2'
 import { MacbookScrollDemo } from './AfyaMedMacScrollDemo'
+import { HeroScrollDemo } from './HeroScrollDemo'
+import { AnimatedPinDemo } from './3DPinDemo'
+import { TabsDemo } from './TabsDemo'
 
 
 const UpcomingSchedule = () => {
@@ -96,13 +99,17 @@ const UpcomingScheduleDetails = ({ appointment }: any) => {
 export default function page() {
     return (
         <div className='bg-white'>
+            <AnimatedPinDemo />
+            <HeroScrollDemo />
             <AfyaMedGlobe />
 
-            <CreditCards2 />
-            <div>
+            <TabsDemo />
+
+            {/* <CreditCards2 /> */}
+            {/* <div>
                 <DeletePopup />
-            </div>
-            
+            </div> */}
+
             <MacbookScrollDemo />
             <Profile />
             {/* <div>

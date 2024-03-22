@@ -4,6 +4,7 @@ import Link from 'next/link';
 import Image from 'next/image';
 import { usePathname } from 'next/navigation';
 import { Menu, Transition } from '@headlessui/react';
+import { AfyaMedLogo } from './afyamed-mac-showcase';
 
 
 export const navTopLinks = [
@@ -142,7 +143,7 @@ export default function Headerzz() {
                             href="/"
                             aria-label="AfyaMed Suite Brand"
                         >
-                            AfyaMed Logo
+                            <AfyaMedLogo />
                         </a>
 
                         <Menu as="div" className="relative inline-block text-left ml-18">
@@ -290,13 +291,13 @@ export default function Headerzz() {
                             <button
                                 type="button"
                                 onClick={toggleUpperDropdown}
-                                className="hs-collapse-toggle w-9 h-9 text-white flex justify-center items-center text-sm font-semibold rounded-lg border border-gray-200  hover:bg-gray-100 disabled:opacity-50 disabled:pointer-events-none dark:text-white dark:border-gray-700 dark:hover:bg-gray-700 dark:focus:outline-none dark:focus:ring-1 dark:focus:ring-gray-600"
+                                className="hs-collapse-toggle w-9 h-9 text-slate-900 flex justify-center items-center text-sm font-semibold rounded-lg border border-gray-200  hover:bg-gray-100 disabled:opacity-50 disabled:pointer-events-none dark:text-white dark:border-gray-700 dark:hover:bg-gray-700 dark:focus:outline-none dark:focus:ring-1 dark:focus:ring-gray-600"
                                 data-hs-collapse="#navbar-collapse-with-animation"
                                 aria-controls="navbar-collapse-with-animation"
                                 aria-label="Toggle navigation"
                             >
                                 <svg
-                                    className="hs-collapse-open:hidden flex-shrink-0 w-4 h-4"
+                                    className="hs-collapse-open:hidden flex-shrink-0 w-10 h-10"
                                     width="16"
                                     height="16"
                                     fill="currentColor"
@@ -338,7 +339,7 @@ export default function Headerzz() {
 
                             <Link
                                 className="flex items-center gap-x-2 font-semibold text-gray-500 hover:text-blue-600 sm:border-s sm:border-gray-300 sm:my-6 sm:ps-6 dark:border-gray-700 dark:text-gray-400 dark:hover:text-blue-500"
-                                href="/auth/login"
+                                href="/auth/signin"
                             >
                                 <svg
                                     className="flex-shrink-0 w-4 h-4"
@@ -372,7 +373,7 @@ export default function Headerzz() {
                         <div className="w-full sm:hidden">
                             <button
                                 type="button"
-                                className="hs-collapse-toggle text-blue-600 group w-full inline-flex justify-between items-center gap-2 rounded-lg font-medium  border border-gray-200 align-middle py-1.5 px-2 focus:outline-none focus:ring-2  transition"
+                                className="hs-collapse-toggle text-blue-100 group w-full inline-flex justify-between items-center gap-2 rounded-lg font-medium  border border-gray-200 align-middle py-1.5 px-2 focus:outline-none focus:ring-2  transition"
                                 data-hs-collapse="#secondary-nav-toggle"
                                 aria-controls="secondary-nav-toggle"
                                 aria-label="Toggle navigation"
@@ -399,8 +400,8 @@ export default function Headerzz() {
 
                     <div
                         id="secondary-nav-toggle"
-                        className={`bg-green-500  ${showDropdown ? '' : 'hidden'
-                            } hs-collapse overflow-hidden transition-all duration-300 absolute top-16 end-0 w-full rounded-lg sm:block sm:static sm:top-0 sm:w-full sm:max-h-full sm:bg-transparent sm:overflow-visible`}
+                        className={`bg-slate-700  ${showDropdown ? '' : 'hidden'
+                            } z-10 hs-collapse overflow-hidden transition-all duration-300 absolute top-16 end-0 w-full rounded-lg sm:block sm:static sm:top-0 sm:w-full sm:max-h-full sm:bg-transparent sm:overflow-visible`}
                     >
                         <div className="ml-6 flex flex-col py-2 sm:flex-row sm:justify-end sm:gap-y-0 sm:gap-x-6 sm:py-0">
                             {navBottomLinks.map((link, i) => (
