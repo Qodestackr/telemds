@@ -8,25 +8,23 @@ export default function Header() {
   return (
     <div className="fixed top-0 left-0 right-0 supports-backdrop-blur:bg-background/60 border-b bg-background/95 backdrop-blur z-20">
       <nav className="h-14 flex items-center justify-between px-4">
+        
         <div className="hidden lg:block">
           <Link
             href={'/dashboard'}
-            target="_blank"
+            // target="_blank"
+            className="text-slate-900 font-medium text-xl hover:scale-110 transition-transform duration-300"
           >
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              viewBox="0 0 24 24"
-              fill="none"
-              stroke="currentColor"
-              strokeWidth="2"
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              className="mr-2 h-6 w-6"
-            >
-              <path d="M15 6v12a3 3 0 1 0 3-3H6a3 3 0 1 0 3 3V6a3 3 0 1 0-3 3h12a3 3 0 1 0-3-3" />
-            </svg>
+            <span className="text-blue-600 font-bold text-3xl mr-1">A</span>
+            <span className="text-red-600 font-bold text-3xl mr-1">f</span>
+            <span className="text-yellow-600 font-bold text-3xl mr-1">y</span>
+            <span className="text-green-600 font-bold text-3xl mr-1">a</span>
+            <span className="text-indigo-600 font-bold text-3xl mr-1">M</span>
+            <span className="text-purple-600 font-bold text-3xl">e</span>
+            <span className="text-md text-gray-600 ml-1">d</span>
           </Link>
         </div>
+
         <div className={cn("block lg:!hidden")}>
           <MobileSidebar />
         </div>

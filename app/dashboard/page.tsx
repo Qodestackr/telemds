@@ -16,7 +16,6 @@ import { ScrollArea } from "@/components/ui/scroll-area";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import CTAShimmerButton from '@/components/ui/CTAShimmerButton';
 
-
 export default function DashboardMain() {
   return (
     <ScrollArea className="h-full">
@@ -164,13 +163,13 @@ export default function DashboardMain() {
                 <CardHeader>
                   <CardTitle>
                     <span>Recent Transactions</span>
-                    <span>
-                      <Link href={'/'}>
+                    {/* <span>
+                      <Link href={'/dashboard'}>
                         <Button>
-
+                          Reset
                         </Button>
                       </Link>
-                    </span>
+                    </span> */}
                   </CardTitle>
                   <CardDescription>
                     You made 265 Transactions this month.

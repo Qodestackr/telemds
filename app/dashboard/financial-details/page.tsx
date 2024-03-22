@@ -85,42 +85,45 @@ const PieChartPlotColors = ["#8884d8", "#82ca9d", "#ffc658", "#ff7f0e"];
 
 
 /*********************************************************************************** */
-
+// 
 /*********************************************************************************** */
 export default function FinancialDetails() {
   return (
     <ScrollArea className='h-full'>
-      <section>
-        <div className="flex flex-col md:flex-row flex-wrap w-full m-4 gap-2">
-          <div className="flex-1 px-2 justify-center w-1/2 md:w-1/2  bg-gray-700 shadow rounded h-300px">
-            <div className="">
-              <p className="text-blue-300 font-bold">Total Claims Processed</p>
-              <p className="py-4 font-bold text-purple-400">325</p>
-              <p className="text-green-300">+3.85%</p>
-            </div>
-          </div>
-          <div className="flex-1 px-2 justify-center w-1/2 md:w-16 bg-gray-700 shadow rounded max-h-300px">
-            <div className="">
-              <p className="text-blue-300 font-bold">Average Claim Amount</p>
-              <p className="py-4 font-bold text-purple-400">KES.3,203 </p>
-              <p className="text-red-400">-14.5%</p>
-            </div>
-          </div>
-          <div className="flex-1 px-2 justify-center w-1/2 md:w-16  bg-gray-700 shadow rounded max-h-300px">
-            <div className="">
-              <p className="text-blue-300 font-bold">Average Reimbursement Time</p>
-              <p className="py-4 font-bold text-purple-400">undefined</p>
-              <p className="text-green-300">undefined</p>
-            </div>
-          </div>
-          <div className="flex-1 px-2 justify-center w-1/2 md:w-16  bg-gray-700 shadow rounded h-300px">
-            <div className="">
-              <p className="text-blue-300 font-bold">Claims Approval Rate</p>
-              <p className="py-4 font-bold text-purple-400 ">450 / month</p>
-              <p className="text-green-300">+34.5%</p>
-            </div>
+      <section className="flex flex-col justify-between items-center w-fu md:items-start md:flex-row flex-wrap gap-2">
+
+        <div className="flex-1 px-2 justify-center bg-gray-700 shadow rounded h-300px">
+          <div className="">
+            <p className="text-blue-300 font-bold">Total Claims Processed</p>
+            <p className="py-4 font-bold text-purple-400">325</p>
+            <p className="text-green-300">+3.85%</p>
           </div>
         </div>
+
+        <div className="flex-1 px-2 justify-center bg-gray-700 shadow rounded max-h-300px">
+          <div className="">
+            <p className="text-blue-300 font-bold">Average Claim Amount</p>
+            <p className="py-4 font-bold text-purple-400">KES.3,203 </p>
+            <p className="text-red-400">-14.5%</p>
+          </div>
+        </div>
+
+        <div className="flex-1 px-2 justify-center  bg-gray-700 shadow rounded max-h-300px">
+          <div className="">
+            <p className="text-blue-300 font-bold">Average Reimbursement Time</p>
+            <p className="py-4 font-bold text-purple-400">undefined</p>
+            <p className="text-green-300">undefined</p>
+          </div>
+        </div>
+
+        <div className="flex-1 px-2 justify-center  bg-gray-700 shadow rounded h-300px">
+          <div className="">
+            <p className="text-blue-300 font-bold">Claims Approval Rate</p>
+            <p className="py-4 font-bold text-purple-400 ">450 / month</p>
+            <p className="text-green-300">+34.5%</p>
+          </div>
+        </div>
+        
       </section>
 
       <section className="flex my-4 px-4 gap-3">
@@ -170,7 +173,7 @@ export default function FinancialDetails() {
           </BarChart>
         </div>
         <div className="w-full h-[300px] bg-white rounded shadow-lg p-4 border border-green-300">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur impedit dolores temporibus id corporis, 
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur impedit dolores temporibus id corporis,
           sunt dicta ipsam quia nobis aliquam!
         </div>
       </section>

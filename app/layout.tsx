@@ -4,13 +4,14 @@ import "@uploadthing/react/styles.css";
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
+
 import { getServerSession } from "next-auth";
 
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "Next Shadcn",
-  description: "Basic dashboard with Next.js and Shadcn",
+  title: "AfyaMed",
+  description: "Welcome to AfyaMed",
 };
 
 export default async function RootLayout({
@@ -21,7 +22,7 @@ export default async function RootLayout({
   // const session = await getServerSession();
   return (
     <html lang="en" suppressHydrationWarning>
-      <body className={`${inter.className} overflow-hidden`}>
+      <body className={`${inter.className} `}>
       {children}
         {/* <Providers session={session}>
           <Toaster />
