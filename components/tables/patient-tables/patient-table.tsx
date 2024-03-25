@@ -55,7 +55,7 @@ export function PatientTable<TData, TValue>({
   searchKey,
   totalUsers,
   pageCount,
-  pageSizeOptions = [10, 20, 30, 40, 50],
+  pageSizeOptions = [20, 30, 40, 50],
 }: DataTableProps<TData, TValue>) {
   const router = useRouter();
   const pathname = usePathname();
@@ -65,9 +65,9 @@ export function PatientTable<TData, TValue>({
   const pageAsNumber = Number(page);
   const fallbackPage =
     isNaN(pageAsNumber) || pageAsNumber < 1 ? 1 : pageAsNumber;
-  const per_page = searchParams?.get("limit") ?? "10";
+  const per_page = searchParams?.get("limit") ?? "20";
   const perPageAsNumber = Number(per_page);
-  const fallbackPerPage = isNaN(perPageAsNumber) ? 10 : perPageAsNumber;
+  const fallbackPerPage = isNaN(perPageAsNumber) ? 20 : perPageAsNumber;
 
   /* this can be used to get the selectedrows 
   console.log("value", table.getFilteredSelectedRowModel()); */

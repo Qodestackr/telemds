@@ -22,7 +22,7 @@ export default function AppointmentPaymentMethod() {
       <div className="flex gap-8 justify-center items-center">
         {/*  */}
         <Label
-          // htmlFor="card"
+          htmlFor="card"
           className="cursor-pointer flex flex-col items-center justify-between rounded-md border-2 border-muted bg-popover p-4 hover:bg-accent hover:text-accent-foreground peer-data-[state=checked]:border-primary [&:has([data-state=checked])]:border-primary"
         >
           <svg
@@ -42,15 +42,18 @@ export default function AppointmentPaymentMethod() {
         </Label>
         {/*  */}
         <Label
-          // htmlFor="paypal"
+          htmlFor="Insurance Plan"
           className="cursor-pointer flex flex-col items-center justify-between rounded-md border-2 border-muted bg-popover p-4 hover:bg-accent hover:text-accent-foreground peer-data-[state=checked]:border-primary [&:has([data-state=checked])]:border-primary"
         >
-          <Image src={'/paypal-svgrepo-com.svg'} alt="paypa afyamed payment" width={34} height={44} />
-          Paypal
+          <Image src={'/insurance-001.png'} alt="paypa afyamed payment" width={34} height={48} />
+          <div className="flex flex-col justify-center items-center gap-1">
+            <span>Insurance</span>
+            <span>Plan</span>
+          </div>
         </Label>
         {/*  */}
         <Label
-          // htmlFor="paypal"
+          htmlFor="Mpesa"
           className=" cursor-pointer flex flex-col items-center justify-between rounded-md border-2 border-muted bg-popover p-4 hover:bg-accent hover:text-accent-foreground peer-data-[state=checked]:border-primary [&:has([data-state=checked])]:border-primary"
         >
           <Image src={'/512px-M-PESA_LOGO-01.svg.png'} alt="paypa afyamed payment" width={34} height={34} />
@@ -62,12 +65,12 @@ export default function AppointmentPaymentMethod() {
 
       <CardContent className="space-y-4">
         <div className="grid gap-2">
-          <Label //htmlFor="name"
+          <Label htmlFor="name"
           >Name</Label>
           <Input id="name" placeholder="First Last" />
         </div>
         <div className="grid gap-2">
-          <Label //htmlFor="number"
+          <Label htmlFor="number"
           >Card number</Label>
           <Input id="number" placeholder="" />
         </div>

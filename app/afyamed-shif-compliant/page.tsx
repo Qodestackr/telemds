@@ -155,14 +155,10 @@ export default function HealthcareCompliance() {
             <p className="text-lg text-gray-700">
                 At AfyaMed, we take data privacy and protection seriously.
                 Our platform is designed to comply with the General Data Protection Regulation
-                (GDPR) and Kenyan SHIF policies to ensure the security and confidentiality of our users' personal health
+                (GDPR) and Kenyan SHIF policies to ensure the security and confidentiality of our users&apos; personal health
                 information. We adhere to strict standards and protocols to safeguard sensitive data
                 and maintain compliance with all relevant healthcare regulations.
-
-                
             </p>
-            {/* <StickyScroll content={content} /> */}
-
         </div>
     );
 }

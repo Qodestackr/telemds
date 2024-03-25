@@ -182,8 +182,41 @@ export const CreateProfileOne: React.FC<ProfileFormType> = ({
     }
   };
 
-  const countries = [{ id: "wow", name: "india" }];
-  const cities = [{ id: "2", name: "kerala" }];
+  const countries = [
+    { id: "1", name: "Kenya" },
+    { id: "2", name: "Uganda" },
+    { id: "3", name: "Tanzania" },
+    { id: "4", name: "Rwanda" },
+    { id: "5", name: "Nigeria" },
+    { id: "6", name: "South Africa" },
+    { id: "7", name: "Ethiopia" },
+    { id: "8", name: "DRC" },
+    { id: "9", name: "Ghana" },
+    { id: "10", name: "Côte d'Ivoire" },
+    { id: "12", name: "Zambia" },
+    { id: "14", name: "Angola" },
+    { id: "15", name: "Zimbabwe" },
+    { id: "16", name: "Botswana" },
+    { id: "19", name: "Mauritius" }
+  ];
+
+  const cities = [
+    { id: "1", name: "Nairobi", countryId: "1" }, // Kenya
+    { id: "2", name: "Kampala", countryId: "2" }, // Uganda
+    { id: "3", name: "Dar es Salaam", countryId: "3" }, // Tanzania
+    { id: "4", name: "Kigali", countryId: "16" }, // Rwanda
+    { id: "5", name: "Lagos", countryId: "4" }, // Nigeria
+    { id: "6", name: "Johannesburg", countryId: "5" }, // South Africa
+    { id: "7", name: "Addis Ababa", countryId: "6" }, // Ethiopia
+    { id: "8", name: "Kinshasa", countryId: "7" }, // Democratic Republic of the Congo
+    { id: "9", name: "Accra", countryId: "9" }, // Ghana
+    { id: "10", name: "Abidjan", countryId: "10" }, // Côte d'Ivoire
+    { id: "12", name: "Lusaka", countryId: "12" }, // Zambia
+    { id: "14", name: "Luanda", countryId: "14" }, // Angola
+    { id: "15", name: "Harare", countryId: "15" }, // Zimbabwe
+    { id: "16", name: "Gaborone", countryId: "17" }, // Botswana
+    { id: "19", name: "Port Louis", countryId: "20" }, // Mauritius
+  ];
 
   return (
     <>
@@ -308,7 +341,7 @@ export const CreateProfileOne: React.FC<ProfileFormType> = ({
                       <FormLabel>Contact Number</FormLabel>
                       <FormControl>
                         <Input
-                          type="number"
+                          type="tel"
                           placeholder="Enter you contact number"
                           disabled={loading}
                           {...field}
@@ -356,7 +389,6 @@ export const CreateProfileOne: React.FC<ProfileFormType> = ({
                   name="city"
                   render={({ field }) => (
                     <FormItem>
-                      <FormLabel>City</FormLabel>
                       <Select
                         disabled={loading}
                         onValueChange={field.onChange}
@@ -402,7 +434,8 @@ export const CreateProfileOne: React.FC<ProfileFormType> = ({
                           errors?.jobs?.[index] && "text-red-700",
                         )}
                       >
-                        {`Work Experience ${index + 1}`}
+                        {`Add Staff and Doctors`}
+                        {/* {`Add Staff and Doctors ${index + 1}`} */}
 
                         <Button
                           variant="outline"
@@ -589,20 +622,34 @@ export const CreateProfileOne: React.FC<ProfileFormType> = ({
             {currentStep === 2 && (
               <div>
                 <h1>Completed</h1>
-                <pre className="whitespace-pre-wrap">
+                {/* <pre className="whitespace-pre-wrap">
                   {JSON.stringify(data)}
-                </pre>
+                </pre> */}
+                <h2>Review Hospital Profile</h2>
+                {/* <div>
+                  <h3>Hospital Information:</h3>
+                  <p>Hospital Number: {data.firstname}</p>
+                  <p>Hospital Name: {data.email}</p>
+                  <p>Location: {data.country}</p>
+                </div> */}
+                {/* <div>
+                  <h3>Contact Information:</h3>
+                  <p>Contact Info: {data.email}</p>
+                  <p>Email: {data.jobtitle}</p>
+                </div> */}
+
+                <Button>Submit</Button>
               </div>
             )}
-          </div>
+        </div>
 
-          {/* <Button disabled={loading} className="ml-auto" type="submit">
+        {/* <Button disabled={loading} className="ml-auto" type="submit">
             {action}
           </Button> */}
-        </form>
-      </Form>
-      {/* Navigation */}
-      <div className="mt-8 pt-5">
+      </form>
+    </Form >
+      {/* Navigation */ }
+      < div className = "mt-8 pt-5" >
         <div className="flex justify-between">
           <button
             type="button"
@@ -647,7 +694,7 @@ export const CreateProfileOne: React.FC<ProfileFormType> = ({
             </svg>
           </button>
         </div>
-      </div>
+      </div >
     </>
   );
 };

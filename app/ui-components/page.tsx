@@ -7,7 +7,7 @@ import { AlarmClock, CalendarCheck, Video } from 'lucide-react'
 import { CardStackDemo } from './CardStackDemo'
 import Profile from '@/components/Profile'
 import { AfyaMedGlobe } from '@/components/AfyaMedGlobe'
-import CreditCards2 from './CreditCards2'
+import CreditCards2 from '../../components/@deprecated/CreditCards2'
 import { MacbookScrollDemo } from './AfyaMedMacScrollDemo'
 import { HeroScrollDemo } from './HeroScrollDemo'
 import { AnimatedPinDemo } from './3DPinDemo'
@@ -221,7 +221,7 @@ export default function page() {
 
                         <span className="rounded-full bg-white px-3 py-1 font-medium text-blue-600">Revolutionizing Healthcare Access</span>
                         <p className="my-6 text-2xl font-semibold leading-10">
-                            AfyaMed brings your hospital to your patients' fingertips, breaking geographical barriers.
+                            AfyaMed brings your hospital to your patients&apos; fingertips, breaking geographical barriers.
                             <span className="whitespace-nowrap py-2 text-cyan-300">{' '}Empowerment and Connection.</span>
                         </p>
 

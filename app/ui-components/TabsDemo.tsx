@@ -29,7 +29,7 @@ export function TabsDemo() {
                     <p>Practitioner Performance Services</p>
                     {/* <DummyContent /> */}
                     <p>
-                        Focus on analytics related to healthcare practitioners' performance and productivity.
+                        Focus on analytics related to healthcare practitioners&apos; performance and productivity.
                         Include metrics such as consultation volume, appointment wait times,
                         practitioner ratings, patient outcomes, and practitioner-patient communication effectiveness.
                     </p>

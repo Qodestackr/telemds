@@ -12,6 +12,7 @@ export default function Page() {
     <ScrollArea className="h-full">
       <div className="flex-1 space-y-4 p-5">
         <BreadCrumb items={breadcrumbItems} />
+        {/* Doctor Type */}
         <ProductForm
           categories={[
             { _id: "shirts", name: "shirts" },
