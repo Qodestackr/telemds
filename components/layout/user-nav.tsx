@@ -11,7 +11,8 @@ import {
   DropdownMenuShortcut,
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
-import { signOut, useSession } from "next-auth/react";
+// import { signOut, useSession } from "next-auth/react";
+import Link from "next/link";
 export function UserNav() {
   // const { data: session } = useSession();
   // if (session) {
@@ -53,22 +54,23 @@ export function UserNav() {
           <DropdownMenuSeparator />
           <DropdownMenuGroup>
             <DropdownMenuItem>
-              Profile
+              <Link href={'/profile'}>Profile</Link>
+              
               <DropdownMenuShortcut>⇧⌘P</DropdownMenuShortcut>
             </DropdownMenuItem>
             <DropdownMenuItem>
-              Payment
-              <DropdownMenuShortcut>⌘B</DropdownMenuShortcut>
+              <Link href={'/financial-details'}>Financial Accounts</Link>
+              <DropdownMenuShortcut>⌘F</DropdownMenuShortcut>
             </DropdownMenuItem>
             <DropdownMenuItem>
-              Settings
+              <Link href={'/profile/settings'}>Settings</Link>
               <DropdownMenuShortcut>⌘S</DropdownMenuShortcut>
             </DropdownMenuItem>
-            <DropdownMenuItem>Add Member</DropdownMenuItem>
+            {/* <DropdownMenuItem>Add Member</DropdownMenuItem> */}
           </DropdownMenuGroup>
           <DropdownMenuSeparator />
-          <DropdownMenuItem onClick={() => signOut()}>
-            Log out
+          <DropdownMenuItem onClick={() => {console.log('signed out')}}>
+            <Link href={'/'}>Log out</Link>
             <DropdownMenuShortcut>⇧⌘Q</DropdownMenuShortcut>
           </DropdownMenuItem>
         </DropdownMenuContent>

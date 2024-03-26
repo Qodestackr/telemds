@@ -1,3 +1,47 @@
+'use client';
+
+import { UploadButton, UploadDropzone } from '@/lib/uploadthing'
+import React from 'react'
+import { ClientUploadedFileData } from 'uploadthing/types';
+
+export default function PageShareToDoc() {
+    return (
+        <div>
+            {/* <UploadButton
+                endpoint='imageUploader'
+                // onBeforeUploadBegin={}
+                onClientUploadComplete={(res: ClientUploadedFileData<null | any>[]) => {
+                    console.log("Files: ", res);
+                    alert("Upload Completed");
+                }}
+            // onUploadError={}
+            // onUploadProgress={}
+
+            /> */}
+
+            <UploadDropzone
+                endpoint='imageUploader'
+                className="bg-slate-800 ut-label:text-lg ut-allowed-content:ut-uploading:text-red-300"
+
+                onClientUploadComplete={(res: ClientUploadedFileData<null | any>[]) => {
+                    console.log("Files: ", res);
+                    alert("Upload Completed");
+                }}
+
+                // onUploadError={(error) => {
+                //     console.log("Error: ", error);
+                //     const fieldErrors = error.data?.zodError?.fieldErrors;
+                //     //                              ^? typeToFlattenedError
+                //     setError(fieldErrors.foo[0] ?? "");
+                // }}
+            />
+        </div>
+    )
+}
+
+
+/*
+
 "use client";
 import { OurFileRouter } from "@/app/api/uploadthing/core";
 import { UploadDropzone } from "@uploadthing/react";
@@ -99,3 +143,5 @@ export default function FileUpload({
     </div>
   );
 }
+
+*/

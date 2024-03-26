@@ -1,3 +1,7 @@
+export {}
+
+/**
+ * ********* TEMPORARILY COMMENTED OUT ******************
 import { NextAuthOptions } from "next-auth";
 import GithubProvider from "next-auth/providers/github";
 import CredentialProvider from "next-auth/providers/credentials";
@@ -34,3 +38,5 @@ export const authOptions: NextAuthOptions = {
     signIn: "/", //sigin page
   },
 };
+ 
+*/
