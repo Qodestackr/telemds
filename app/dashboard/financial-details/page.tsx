@@ -89,7 +89,7 @@ const PieChartPlotColors = ["#8884d8", "#82ca9d", "#ffc658", "#ff7f0e"];
 /*********************************************************************************** */
 export default function FinancialDetails() {
   return (
-    <ScrollArea className='h-full'>
+    <ScrollArea>
       <section className="flex flex-col justify-between items-center w-fu md:items-start md:flex-row flex-wrap gap-2">
 
         <div className="flex-1 px-2 justify-center bg-gray-700 shadow rounded h-300px">

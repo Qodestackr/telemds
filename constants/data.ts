@@ -131,6 +131,12 @@ export const navItems: NavItem[] = [
     icon: "analytics",
     label: "Analytics",
   },
+  {
+    title: "E-Triage",
+    href: "/dashboard/e-triage",
+    icon: "triage",
+    label: "E-Triage",
+  },
   
   {
     title: "Messages",

@@ -111,7 +111,7 @@ export function CalendarForm() {
 export default function page() {
 
     return (
-        <ScrollArea className='h-full'>
+        <ScrollArea>
             <div>
                 {/* <DemoShareDocument /> */}
                 {/*  */}

@@ -7,7 +7,7 @@ import Link from "next/link";
 const breadcrumbItems = [{ title: "Profile", link: "/dashboard/profile" }];
 export default function page() {
   return (
-    <ScrollArea className="h-full">
+    <ScrollArea>
       <div className="flex-1 space-y-4 p-4 md:p-8 pt-6">
         <Link href={'/dashboard/user/new'} className="text-xl">
           <Button className="bg-blue-400 text-slate-100 hover:bg-blue-600">

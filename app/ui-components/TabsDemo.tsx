@@ -1,5 +1,6 @@
 "use client";
 
+import { UnderConstruction } from "@/components/site-status";
 import { AnimatedTabs } from "@/components/ui/AnimatedTabs";
 import Image from "next/image";
 
@@ -9,7 +10,7 @@ export function TabsDemo() {
             title: "Patient Engagement",
             value: "Patient Engagement",
             content: (
-                <div className="w-full overflow-hidden relative h-full rounded-2xl p-10 text-xl md:text-4xl font-bold text-white bg-gradient-to-br from-purple-700 to-violet-900">
+                <div className="w-full overflow-hidden relative h-full rounded-2xl p-4  text-white bg-gradient-to-br from-slate-700 to-slate-900">
                     <p>Patient Engagement Services</p>
                     {/* <DummyContent /> */}
                     <p>
@@ -17,15 +18,15 @@ export function TabsDemo() {
                         This tab could include data on consultation duration, appointment frequency,
                         patient feedback, satisfaction ratings, and follow-up appointment rates.
                     </p>
-                    <h3 className="text-green-500 text-3xl">Under Construction</h3>
+                    <UnderConstruction />
                 </div>
             ),
         },
         {
-            title: "Practitioner Performance:",
-            value: "Practitioner Performance:",
+            title: "Practitioner Performance",
+            value: "Practitioner Performance",
             content: (
-                <div className="w-full overflow-hidden relative h-full rounded-2xl p-10 text-xl md:text-4xl font-bold text-white bg-gradient-to-br from-purple-700 to-violet-900">
+                <div className="w-full overflow-hidden relative h-full rounded-2xl p-4  text-white bg-gradient-to-br from-slate-700 to-slate-900">
                     <p>Practitioner Performance Services</p>
                     {/* <DummyContent /> */}
                     <p>
@@ -33,7 +34,7 @@ export function TabsDemo() {
                         Include metrics such as consultation volume, appointment wait times,
                         practitioner ratings, patient outcomes, and practitioner-patient communication effectiveness.
                     </p>
-                    <h3 className="text-green-500 text-3xl">Under Construction</h3>
+                    <UnderConstruction />
                 </div>
             ),
         },
@@ -41,7 +42,7 @@ export function TabsDemo() {
             title: "Health Outcomes",
             value: "Health Outcomes",
             content: (
-                <div className="w-full overflow-hidden relative h-full rounded-2xl p-10 text-xl md:text-4xl font-bold text-white bg-gradient-to-br from-purple-700 to-violet-900">
+                <div className="w-full overflow-hidden relative h-full rounded-2xl p-10 font-bold text-white bg-gradient-to-br from-slate-700 to-slate-900">
                     <p>Health Outcomes tab</p>
                     {/* <DummyContent /> */}
                     <p>
@@ -49,7 +50,7 @@ export function TabsDemo() {
                         This tab could include data on
                         treatment effectiveness, disease management, patient recovery rates, and health improvement trends.
                     </p>
-                    <h3 className="text-green-500 text-3xl">Under Construction!</h3>
+                    <UnderConstruction />
                 </div>
             ),
         },
@@ -57,14 +58,14 @@ export function TabsDemo() {
             title: "Location Based Services",
             value: "Location Based Services",
             content: (
-                <div className="w-full overflow-hidden relative h-full rounded-2xl p-10 text-xl md:text-4xl font-bold text-white bg-gradient-to-br from-purple-700 to-violet-900">
+                <div className="w-full overflow-hidden relative h-full rounded-2xl p-4  text-white bg-gradient-to-br from-slate-700 to-slate-900">
                     <p>Location Based Services</p>
                     {/* <DummyContent /> */}
                     <p>
                         This tab could include maps, visualizations, and analytics on patient distribution,
                         healthcare facility locations, service coverage areas, and regional healthcare disparities.
                     </p>
-                    <h3 className="text-green-500 text-3xl">Under Constructions</h3>
+                    <UnderConstruction />
                 </div>
             ),
         },
@@ -72,7 +73,7 @@ export function TabsDemo() {
             title: "Telemedicine Access",
             value: "Telemedicine Access",
             content: (
-                <div className="w-full overflow-hidden relative h-full rounded-2xl p-10 text-xl md:text-4xl font-bold text-white bg-gradient-to-br from-purple-700 to-violet-900">
+                <div className="w-full overflow-hidden relative h-full rounded-2xl p-4  text-white bg-gradient-to-br from-slate-700 to-slate-900">
                     <p>Telemedicine Access tab</p>
                     {/* <DummyContent /> */}
                     <p>
@@ -81,7 +82,7 @@ export function TabsDemo() {
                         telemedicine users, device usage, internet connectivity, and telemedicine
                         usage trends over time.
                     </p>
-                    <h3 className="text-green-500 text-3xl">Under Constructions</h3>
+                    <UnderConstruction />
                 </div>
             ),
         },
@@ -93,15 +94,3 @@ export function TabsDemo() {
         </div>
     );
 }
-
-const DummyContent = () => {
-    return (
-        <Image
-            src="/linear.webp"
-            alt="dummy image"
-            width="1000"
-            height="1000"
-            className="object-cover object-left-top h-[60%]  md:h-[90%] absolute -bottom-10 inset-x-0 w-[90%] rounded-xl mx-auto"
-        />
-    );
-};

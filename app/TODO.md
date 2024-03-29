@@ -9,4 +9,4 @@ This is a file that defines what I'll do to make the lines of code ticking, and 
 - Actions like Recommended? Really? Not really for now.
 - Shuffling Cards for both, showing upcoming card to the patient, and upcoming 
 
-2. 
+<!-- 2. The role of E-Triage is to get out of Outpatient Care. -->

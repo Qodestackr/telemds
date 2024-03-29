@@ -8,7 +8,7 @@ const breadcrumbItems = [{ title: "Manage Appointments", link: "/dashboard/kanba
 export default function page() {
   return (
     <>
-      <ScrollArea className="h-full snap-mandatory snap-x">
+      <ScrollArea className="snap-mandatory snap-x">
         <div className="flex-1 space-y-4 p-4 md:p-8 pt-6">
           <BreadCrumb items={breadcrumbItems} />
           <div className="flex items-start justify-between text-blue-500">

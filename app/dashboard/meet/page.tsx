@@ -11,7 +11,7 @@ export default function page() {
                     startWithAudioMuted: false,
                     hiddenPremeetingButtons: ['microphone']
                 }}
-                roomName={'YOUR_CUSTOM_ROOM_NAME'}
+                roomName={'Consult with Dr. Eunice'}
                 getIFrameRef={node => node.style.height = '800px'}
             />
         </ScrollArea >

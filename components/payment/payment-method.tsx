@@ -9,6 +9,7 @@ import { SelectValue, SelectTrigger, SelectItem, SelectContent, Select } from "@
 import { Input } from "@/components/ui/input"
 import { Button } from "@/components/ui/button"
 import Image from "next/image"
+import Link from "next/link"
 
 export default function AppointmentPaymentMethod() {
   return (
@@ -159,7 +160,9 @@ export default function AppointmentPaymentMethod() {
       </CardContent>
       {/*  */}
       <CardFooter>
-        <Button className="ml-auto">Submit</Button>
+        <Link href={'/dashboard/meet'}>
+          <Button className="ml-auto">Submit</Button>
+        </Link>
       </CardFooter>
     </Card>
   )

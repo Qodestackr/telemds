@@ -18,7 +18,7 @@ import CTAShimmerButton from '@/components/ui/CTAShimmerButton';
 
 export default function DashboardMain() {
   return (
-    <ScrollArea className="h-full">
+    <ScrollArea>
 
       <div className="flex-1 space-y-4 p-4 md:p-8 pt-6">
         <div className="flex items-center justify-between space-y-2">
@@ -37,16 +37,66 @@ export default function DashboardMain() {
             </Link>
           </div>
         </div>
-        <Tabs defaultValue="overview" className="space-y-4">
+        <Tabs defaultValue="overview">
+          {/*  */}
           <TabsList>
             <TabsTrigger value="overview">Overview</TabsTrigger>
-            <TabsTrigger value="analytics"
-            // disabled
-            >
-              Analytics
-            </TabsTrigger>
+            <TabsTrigger value="analytics">Analytics</TabsTrigger>
           </TabsList>
-          <TabsContent value="overview" className="space-y-4">
+          {/*  */}
+          <TabsContent value="overview" >
+            <div className="flex flex-col md:flex-row justify-even items-center gap-1 flex-wrap">
+              <Link href={'/dashboard/financial-details'} className='p-2'>
+                <Card className='w-[300px] h-[250px]'>
+                  <CardTitle>Insurance Claims</CardTitle>
+                  <CardDescription>
+                    Check the status of insurance claims and track their resolution.
+                  </CardDescription>
+                  <CardContent>
+                    <p>View the status of insurance claims, including whether they have been resolved or are still pending. Keep track of payments and reimbursements received for medical services rendered.</p>
+                  </CardContent>
+                </Card>
+              </Link>
+              <Link href={'/dashboard/kanban'}>
+                <Card className='w-[300px] h-[250px] p-2'>
+                  <CardTitle>Scheduled Appointments</CardTitle>
+                  <CardDescription>
+                    View and manage your upcoming appointments with healthcare providers.
+                  </CardDescription>
+                  <CardContent>
+
+                    <p>Access your scheduled meetings and appointments with healthcare providers. You can view details, reschedule, or cancel appointments as needed.</p>
+                  </CardContent>
+                </Card>
+              </Link>
+
+              <Link href={'/dashboard/patient'}>
+                <Card className='w-[300px] h-[250px] p-2'>
+                  <CardTitle>Lab Results</CardTitle>
+                  <CardDescription>
+                    Check the status of Lab Results.
+                  </CardDescription>
+                  <CardContent>
+                    Check and review test results, track patient health progress, and discuss findings and further consultations.
+                  </CardContent>
+                </Card>
+              </Link>
+
+              <Link href={'/dashboard/patient'}>
+                <Card className='w-[300px] h-[250px] p-22'>
+                  <CardTitle>Patient Medical Records</CardTitle>
+                  <CardDescription>
+                    Access and review patient medical records and history.
+                  </CardDescription>
+                  <CardContent>
+                    <p>View comprehensive medical records and history of patients, including past diagnoses, treatments, medications, and any relevant notes or comments. Use this information to make informed decisions and provide personalized care to patients.</p>
+                  </CardContent>
+                </Card>
+              </Link>
+            </div>
+          </TabsContent>
+          {/*  */}
+          <TabsContent value="analytics" className="space-y-4">
             <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-4">
               <Card>
                 <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
@@ -180,70 +230,6 @@ export default function DashboardMain() {
                 </CardContent>
               </Card>
             </div>
-          </TabsContent>
-          {/* Analytics Section , For basic user stuff and/or others */}
-          <TabsContent value="analytics" className="space-y-4">
-            <div className=" bg-white2">
-              <div className="z-10 mx-auto w-full px-6 py-12 sm:px-8 sm:py-16 lg:px-10 xl:px-16">
-                <div className="mb-12">
-                  <div className="lg:flex-no-wrap -mx-3 flex flex-row flex-wrap items-end">
-                    <div className="mr-auto w-full flex-grow px-3">
-                      <h3 className="text-xl font-light text-slate-600">Book a virtual consultation with a healthcare provider.</h3>
-                    </div>
-                  </div>
-                </div>
-                <div className="-mx-2 flex flex-wrap font-bold">
-                  <div className="mb-4 w-full px-2 lg:w-3/5">
-                    <div className="h-full w-full bg-blue-900">
-                      <div className="z-10 flex flex-col justify-between">
-                        <h1 className="text-3xl text-white">#1</h1>
-                        <h6 className="mt-12 text-xl text-white sm:text-3xl">Schedule Appointment.</h6>
-                      </div>
-                    </div>
-                  </div>
-
-                  <div className="mb-4 w-full px-2 lg:w-2/5">
-                    <div className="h-full w-full bg-yellow-400 p-6">
-                      <div className="z-10 flex flex-col justify-between">
-                        <h1 className="text-xl font-light text-blue-900">We are SHIF Compliant</h1>
-                        <Button className="mt-12 text-2xl text-white p-6 bg-blue-500">
-                          <Link href={'/dashboard/insurance-plan/add'}>
-                          Add Insurance Plan
-                          </Link>
-                        </Button>
-                      </div>
-                    </div>
-                  </div>
-                  
-                  <div className="mb-4 w-full px-2 lg:w-1/3">
-                    <div className="h-full w-full bg-indigo-600 p-6">
-                      <div className="absolute z-0 opacity-0 hover:opacity-50" style={{ mixBlendMode: "multiply" }}></div>
-                      <div className="z-10 flex flex-col justify-between">
-                        <h1 className="text-4xl text-white">70+</h1>
-                        <h6 className="mt-12 text-xl text-white sm:text-3xl">Health Outcomes</h6>
-                      </div>
-                    </div>
-                  </div>
-                  <div className="mb-4 w-full px-2 lg:w-1/3">
-                    <div className="h-full w-full bg-blue-400 p-6">
-                      <div className="z-10 flex flex-col justify-between">
-                        <h1 className="text-4xl text-white">12k</h1>
-                        <h6 className="mt-12 text-xl text-white sm:text-3xl">Access Lab Results</h6>
-                      </div>
-                    </div>
-                  </div>
-                  <div className="mb-4 w-full px-2 lg:w-1/3">
-                    <div className="h-full w-full bg-red-200 p-6">
-                      <div className="z-10 flex flex-col justify-between">
-                        <h1 className="text-4xl text-blue-900">23</h1>
-                        <h6 className="mt-12 text-xl text-blue-900 sm:text-3xl">Telemedicine Access:</h6>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-
           </TabsContent>
         </Tabs>
       </div>

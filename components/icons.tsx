@@ -31,7 +31,8 @@ import {
   X,
   MessageCircle,
   BarChart4,
-  CalendarClock
+  CalendarClock,
+  ListTodo,
 } from "lucide-react";
 
 export type Icon = LucideIcon;
@@ -66,6 +67,7 @@ export const Icons = {
   moon: Moon,
   message: MessageCircle,
   laptop: Laptop,
+  triage: ListTodo,
   gitHub: ({ ...props }: LucideProps) => (
     <svg
       aria-hidden="true"

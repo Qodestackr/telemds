@@ -5,7 +5,7 @@ import { TabsDemo } from '@/app/ui-components/TabsDemo';
 
 export default function Analytics() {
   return (
-    <ScrollArea className='h-full'>
+    <ScrollArea>
       <TabsDemo />
     </ScrollArea>
   )
