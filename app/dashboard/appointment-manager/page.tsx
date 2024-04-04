@@ -4,7 +4,7 @@ import NewTaskDialog from "@/components/kanban/new-task-dialog";
 import { Heading } from "@/components/ui/heading";
 import { ScrollArea } from "@/components/ui/scroll-area";
 
-const breadcrumbItems = [{ title: "Manage Appointments", link: "/dashboard/kanban" }];
+const breadcrumbItems = [{ title: "Manage Appointments", link: "/dashboard/appointment-manager" }];
 export default function page() {
   return (
     <>

@@ -15,17 +15,16 @@ import {
 import { ScrollArea } from "@/components/ui/scroll-area";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import CTAShimmerButton from '@/components/ui/CTAShimmerButton';
+import { CardStackDemo } from './CardStackDemo';
 
 export default function DashboardMain() {
   return (
-    <ScrollArea>
-
-      <div className="flex-1 space-y-4 p-4 md:p-8 pt-6">
-        <div className="flex items-center justify-between space-y-2">
-          <h2 className="text-3xl font-bold tracking-tight">
+    <>
+      <div className="flex items-end justify-center space-y-2 mb-10">
+        {/* <h2 className="text-3xl font-bold tracking-tight">
             Hi, Welcome back 👋
-          </h2>
-          <div className="hidden md:flex items-center space-x-2">
+          </h2> */}
+        {/* <div className="hidden md:flex items-center space-x-2">
             <CalendarDateRangePicker />
             <Link href={'/dashboard/book-appointment'}>
               <button className="px-8 py-2 rounded-full relative bg-slate-700 text-white text-sm hover:shadow-2xl hover:shadow-white/[0.1] transition duration-200 border border-slate-600">
@@ -35,8 +34,12 @@ export default function DashboardMain() {
                 </span>
               </button>
             </Link>
-          </div>
-        </div>
+          </div> */}
+        <CardStackDemo />
+      </div>
+
+      <div className="flex-1 space-y-4 p-4 md:p-8 pt-6">
+
         <Tabs defaultValue="overview">
           {/*  */}
           <TabsList>
@@ -57,7 +60,7 @@ export default function DashboardMain() {
                   </CardContent>
                 </Card>
               </Link>
-              <Link href={'/dashboard/kanban'}>
+              <Link href={'/dashboard/appointment-manager'}>
                 <Card className='w-[300px] h-[250px] p-2'>
                   <CardTitle>Scheduled Appointments</CardTitle>
                   <CardDescription>
@@ -234,7 +237,7 @@ export default function DashboardMain() {
         </Tabs>
       </div>
 
-    </ScrollArea>
+    </>
   );
 }
 

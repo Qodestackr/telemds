@@ -1,6 +1,7 @@
 "use client"
 
-import federatedLogout from "@/lib/utils"
+import federatedLogout from "@/lib/federatedLogout"
+
 
 export default function Logout() {
     return <button

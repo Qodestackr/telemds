@@ -1,5 +1,16 @@
 import { Icons } from "@/components/icons";
-import { BadgeDollarSign, BarChart4, BellDot, CalendarClock, LogOut, MessageCircle, ShieldBan, Stethoscope, User, UserCog, } from "lucide-react";
+import {
+  BadgeDollarSign,
+  BarChart4,
+  BellDot,
+  CalendarClock,
+  LogOut,
+  MessageCircle,
+  ShieldBan,
+  Stethoscope,
+  User,
+  UserCog,
+} from "lucide-react";
 
 import { NavItem, SidebarNavItem } from "@/types";
 
@@ -137,7 +148,7 @@ export const navItems: NavItem[] = [
     icon: "triage",
     label: "E-Triage",
   },
-  
+
   {
     title: "Messages",
     href: "/dashboard/messages",
@@ -176,7 +187,7 @@ export const navItems: NavItem[] = [
   },
   {
     title: "Appointment Manager",
-    href: "/dashboard/kanban",
+    href: "/dashboard/appointment-manager",
     icon: "kanban",
     label: "kanban",
   },

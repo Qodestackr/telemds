@@ -1,7 +1,10 @@
 import React from 'react'
+import './status.module.css'
 
-export default function page() {
+export default function ApplicationProdStatus() {
   return (
-    <div>page</div>
+    <main className='status'>
+      Application Prod Status
+    </main>
   )
 }

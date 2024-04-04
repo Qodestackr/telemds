@@ -3,6 +3,7 @@
 import React from 'react'
 import { ScrollArea } from "@/components/ui/scroll-area";
 import { AreaChart, Area, XAxis, YAxis, Tooltip, ResponsiveContainer, Bar, BarChart, Legend, Cell, Pie, PieChart } from 'recharts';
+import BreadCrumb from '@/components/breadcrumb';
 
 const data = [
   { year: '2016', consultations: 4000, prescriptions: 2400 },
@@ -89,7 +90,9 @@ const PieChartPlotColors = ["#8884d8", "#82ca9d", "#ffc658", "#ff7f0e"];
 /*********************************************************************************** */
 export default function FinancialDetails() {
   return (
-    <ScrollArea>
+    <ScrollArea className='container'>
+      <BreadCrumb items={[{ title: "Financial Details", link: "/dashboard/Financial Details" }]} />
+
       <section className="flex flex-col justify-between items-center w-fu md:items-start md:flex-row flex-wrap gap-2">
 
         <div className="flex-1 px-2 justify-center bg-gray-700 shadow rounded h-300px">
@@ -123,7 +126,7 @@ export default function FinancialDetails() {
             <p className="text-green-300">+34.5%</p>
           </div>
         </div>
-        
+
       </section>
 
       <section className="flex my-4 px-4 gap-3">

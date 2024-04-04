@@ -6,7 +6,7 @@ import { ClientUploadedFileData } from 'uploadthing/types';
 
 export default function PageShareToDoc() {
     return (
-        <div>
+        <div className='container'>
             {/* <UploadButton
                 endpoint='imageUploader'
                 // onBeforeUploadBegin={}

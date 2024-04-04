@@ -1,3 +1,7 @@
+
+'use client';
+
+
 import {
   Bird,
   Book,
@@ -45,11 +49,32 @@ import {
   TooltipContent,
   TooltipTrigger,
 } from "@/components/ui/tooltip"
+import { MouseEventHandler, useState } from "react"
+import router from "next/router";
+import UnderMaintenance from "@/components/site-status";
+import Link from "next/link";
+
+
+import BreadCrumb from '@/components/breadcrumb';
+
+const breadcrumbItems = [{ title: "E-Triage", link: "/dashboard/E-Triage" }];
+
 
 export default function ETriage() {
+  const [showTriageData, setShowTriageData] = useState(false)
+
+  const saveTriageData = async (e: any) => {
+    e.preventDefault();
+    console.log('data....');
+    // router.push('/')
+    setShowTriageData(true);
+  }
+
   return (
     <div className="grid h-screen w-full pl-[53px]">
       <div className="flex flex-col">
+        <BreadCrumb items={breadcrumbItems} />
+
         <header className="sticky top-0 z-10 flex h-[53px] items-center gap-1 border-b bg-background px-4">
           <h1 className="text-xl text-blue-400 font-satoshi italic">AfyaMed E-Triage | Vital Signs</h1>
           <Drawer>
@@ -172,14 +197,18 @@ export default function ETriage() {
               </form>
             </DrawerContent>
           </Drawer>
-          <Button
-            variant="outline"
-            size="sm"
-            className="ml-auto gap-1.5 text-sm"
-          >
-            <Share className="size-3.5" />
-            Share
-          </Button>
+          {/*  */}
+          <Link href={'/dashboard/share-to-doc'}>
+            <Button
+              variant="outline"
+              size="sm"
+              className="ml-auto gap-1.5 text-sm"
+            >
+              <Share className="size-3.5" />
+              Share Documents
+            </Button>
+          </Link>
+          {/*  */}
         </header>
         <main className="grid flex-1 gap-4 overflow-auto p-4 md:grid-cols-2 lg:grid-cols-3">
           <div className="relative hidden flex-col items-start gap-8 md:flex">
@@ -367,43 +396,69 @@ export default function ETriage() {
           </div>
 
           <div className="relative flex h-full flex-col rounded-xl bg-muted/100 p-4 lg:col-span-2">
-            <Badge className="absolute right-2 top-3 bg-indigo-800 z-50 flex justify-center items-center text-white w-1/3 p-5 hover:bg-indigo-800 hover:cursor-pointer">
-              Real Time E-Triage Output
-            </Badge>
+            {
+              showTriageData ? (
+                <>
+                  <h1 className="bg-slate-800 text-blue-100 p-5 text-center text-2xl">
+                    No Information To Show Yet.
+                    Some RealTime Data Will Show Here.
+                  </h1>
+                  <UnderMaintenance />
 
-            <div className="flex-1 bg-slate-700 text-white w-full rounded my-3 relative">
-              <img src="/hospital/triage-pro-max.png" alt="E-Triage" className="w-full h-full rounded-md" />
-              <div className="absolute top-1/4 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
-                <Rotate3D className="w-20 h-20 animate-spin hover:animate-none hover:cursor-pointer text-green-200" />
-              </div>
-            </div>
+                  <Link href={'/dashboard/e-triage/hospital-waiting-lobby'}>
+                    <Button
+                      size="lg" className="ml-auto my-2 gap-1.5 h-14 hover:bg-blue-600 bg-blue-500">
+                      {/* TODO: // settings/triage customization */}
+                      Customize Triage Output?
+                      <CornerDownLeft className="size-3.5" />
+                    </Button>
+                  </Link>
+                </>
+              ) : (
+                <>
+                  <Badge className="absolute right-2 top-3 bg-indigo-800 z-50 flex justify-center items-center text-white w-1/3 p-5 hover:bg-indigo-800 hover:cursor-pointer">
+                    Real Time E-Triage Output
+                  </Badge>
 
-            <form className="relative overflow-hidden rounded-lg border bg-background focus-within:ring-1 focus-within:ring-ring">
+                  <div className="flex-1 bg-slate-700 text-white w-full rounded my-3 relative">
+                    <img src="/hospital/triage-pro-max.png" alt="E-Triage" className="w-full h-full rounded-md" />
+                    <div className="absolute top-1/4 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
+                      <Rotate3D className="w-20 h-20 animate-spin hover:animate-none hover:cursor-pointer text-green-200" />
+                    </div>
+                  </div>
 
-              <Label htmlFor="message" className="text-blue-400 font-semibold my-2 mx-2">
-                Message
-              </Label>
-              <Textarea
-                id="message"
-                placeholder="Enter patient triage information here..."
-                className="min-h-12 resize-none border-0 p-3 shadow-none focus-visible:ring-0"
-              />
-              <div className="flex items-center p-3 pt-0">
-                <Button variant="ghost" size="icon">
-                  <Paperclip className="size-4" />
-                  <span className="sr-only">Attach file</span>
-                </Button>
-                <Button variant="ghost" size="icon">
-                  <Mic className="size-4" />
-                  <span className="sr-only">Use Microphone</span>
-                </Button>
-                <Button
-                  size="sm" className="ml-auto gap-1.5 h-14">
-                  Save Triage Data
-                  <CornerDownLeft className="size-3.5" />
-                </Button>
-              </div>
-            </form>
+                  <form className="relative overflow-hidden rounded-lg border bg-background focus-within:ring-1 focus-within:ring-ring">
+
+                    <Label htmlFor="message" className="text-blue-400 font-semibold my-2 mx-2">
+                      Message
+                    </Label>
+                    <Textarea
+                      id="message"
+                      placeholder="Enter patient triage information here..."
+                      className="min-h-12 resize-none border-0 p-3 shadow-none focus-visible:ring-0"
+                    />
+                    <div className="flex items-center p-3 pt-0">
+                      <Button variant="ghost" size="icon">
+                        <Paperclip className="size-4" />
+                        <span className="sr-only">Attach file</span>
+                      </Button>
+                      <Button variant="ghost" size="icon">
+                        <Mic className="size-4" />
+                        <span className="sr-only">Use Microphone</span>
+                      </Button>
+
+                      <Button
+                        onClick={saveTriageData}
+                        size="sm" className="ml-auto gap-1.5 h-14">
+                        Save Triage Data
+                        <CornerDownLeft className="size-3.5" />
+                      </Button>
+
+                    </div>
+                  </form>
+                </>
+              )
+            }
           </div>
         </main>
       </div>
